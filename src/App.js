@@ -4,15 +4,19 @@ import "antd/dist/antd.min.css";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import {
   AccountProfile,
+  ApplyLoan,
   DashboardPage,
   DividendEarnings,
   DocumentReports,
   EventsCalendar,
   GurantorsLoans,
   LoadingPage,
+  LoanCalculator,
   // LayoutPage,
   LoginPage,
+  MultiStepForm,
   OnlineLoansHub,
+  PageNotFound,
   TransactionHistory,
   ViewStatements,
 } from "./components";
@@ -28,6 +32,7 @@ const LazyLayout = React.lazy(() => {
 function App() {
   return (
       <Routes>
+        <Route index element={<LoginPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route
           path="dashboard"
@@ -47,7 +52,12 @@ function App() {
           <Route path="dividends-earnings" element={<DividendEarnings />} />
           <Route path="view-statements" element={<ViewStatements />} />
           <Route path="account-profile" element={<AccountProfile />} />
+          <Route path="loan-calculator" element={<LoanCalculator />} />
+          <Route path="apply-loan" element={<ApplyLoan />} />
+          <Route path="multistep-form" element={<MultiStepForm />} />
+          <Route path="*" element={<PageNotFound/>}/>
         </Route>
+        <Route path="*" element={<PageNotFound/>}/>
       </Routes>
   );
 }

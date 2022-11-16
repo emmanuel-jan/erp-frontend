@@ -76,7 +76,7 @@ const DashboardPage = (props) => {
           minHeight: 280,
         }}
       >
-        <Row gutter={16}>
+        <Row gutter={[16, { xs: 16, sm: 16, md: 16, lg: 16 }]}>
           <Col xs={24} sm={24} md={6} lg={6} xl={6}>
             <Card
               style={{ borderRadius: "10px", background: "#A1D488" }}
@@ -126,7 +126,7 @@ const DashboardPage = (props) => {
             </Card>
           </Col>
         </Row>
-        <Row gutter={16} style={{ marginTop: "20px" }}>
+        <Row gutter={[16, { xs: 16, sm: 16, md: 16, lg: 16 }]} style={{ marginTop: "20px" }}>
           <Col xs={24} sm={24} md={12} lg={12} xl={12}>
             <Card title="News title" bordered={false}>
               <p>

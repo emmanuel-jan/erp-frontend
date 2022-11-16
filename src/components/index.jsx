@@ -10,3 +10,7 @@ export { default as DocumentReports } from "./pages/DocumentReports/DocumentRepo
 export { default as ViewStatements } from "./pages/ViewStatements/ViewStatements";
 export { default as AccountProfile } from "./pages/AccountProfile/AccountProfile";
 export { default as LoadingPage } from "./pages/LoadingPage/LoadingPage";
+export { default as PageNotFound } from "./pages/PageNotFound/PageNotFound";
+export { default as LoanCalculator } from "./pages/LoanCalculator/LoanCalculator";
+export { default as ApplyLoan } from "./pages/ApplyLoan/ApplyLoan";
+export { default as MultiStepForm } from "./pages/MultiStepForm/MultiStepForm";

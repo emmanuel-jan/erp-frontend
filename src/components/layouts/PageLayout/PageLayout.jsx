@@ -11,7 +11,7 @@ import {
   Row,
   Card,
   Space,
-  Button
+  Button,
 } from "antd";
 import {
   UserOutlined,
@@ -52,66 +52,44 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
+  getItem(<Link to="home">Dashboard</Link>, "1", <HomeOutlined />),
   getItem(
-    <Link to="home" >
-      Dashboard
-    </Link>,
-    "1",
-    <HomeOutlined />
-  ),
-  getItem(
-    <Link to="online-loans-hub" >
-      Online Loans Hub
-    </Link>,
+    <Link to="online-loans-hub">Online Loans Hub</Link>,
     "2",
     <WifiOutlined />
   ),
   getItem(
-    <Link to="events-calendar" >
-      Events Calendar
-    </Link>,
+    <Link to="events-calendar">Events Calendar</Link>,
     "3",
     <CalendarOutlined />
   ),
   getItem(
-    <Link to="gurantors-loans" >
-      Gurantors & Loans
-    </Link>,
+    <Link to="gurantors-loans">Gurantors & Loans</Link>,
     "4",
     <UsergroupAddOutlined />
   ),
   getItem(
-    <Link to="transaction-history" >
-      Transaction History
-    </Link>,
+    <Link to="transaction-history">Transaction History</Link>,
     "5",
     <HistoryOutlined />
   ),
   getItem(
-    <Link to="dividends-earnings" >
-      Dividends/Earnings
-    </Link>,
+    <Link to="dividends-earnings">Dividends/Earnings</Link>,
     "6",
     <DollarOutlined />
   ),
   getItem(
-    <Link to="documents-reports" >
-      Documents/Reports
-    </Link>,
+    <Link to="documents-reports">Documents/Reports</Link>,
     "7",
     <FileOutlined />
   ),
   getItem(
-    <Link to="view-statements" >
-      View Statements
-    </Link>,
+    <Link to="view-statements">View Statements</Link>,
     "8",
     <FileDoneOutlined />
   ),
   getItem(
-    <Link to="account-profile" >
-      Account Profile
-    </Link>,
+    <Link to="account-profile">Account Profile</Link>,
     "9",
     <UserOutlined />
   ),
@@ -149,7 +127,9 @@ const PageLayout = (props) => {
           <Menu mode="inline" items={items} />
         </Sider>
         <Layout style={{ padding: "0 24px 24px" }}>
-          <Outlet />
+          <Content>
+            <Outlet />
+          </Content>
           <Footer
             style={{
               textAlign: "center",
@@ -158,7 +138,7 @@ const PageLayout = (props) => {
             <Button type="link">About Us</Button>
             <Button type="link">Help Center</Button>
             <Button type="link">Privacy and Terms</Button>
-            <br/>
+            <br />
             ERP Syst ©2022
           </Footer>
         </Layout>

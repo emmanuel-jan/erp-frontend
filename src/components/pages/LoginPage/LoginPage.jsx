@@ -21,12 +21,21 @@ const { Meta } = Card;
 const { Header, Content, Footer } = Layout;
 
 const LoginPage = (props) => {
+
+  const [loading, setLoading] = React.useState(false);
   const onFinish = (values) => {
     console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
   };
+  const onButtonClick = (e) => {
+
+  }
 
   return (
     <>
@@ -139,7 +148,9 @@ const LoginPage = (props) => {
                           shape="round"
                           style={{ backgroundColor: "#30C1B9", border: "none" }}
                           block
+                          loading={loading}
                           htmlType="submit"
+                          onCLick={onButtonClick}
                         >
                           Login
                         </Button>
