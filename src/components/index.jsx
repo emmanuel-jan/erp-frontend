@@ -14,3 +14,4 @@ export { default as PageNotFound } from "./pages/PageNotFound/PageNotFound";
 export { default as LoanCalculator } from "./pages/LoanCalculator/LoanCalculator";
 export { default as ApplyLoan } from "./pages/ApplyLoan/ApplyLoan";
 export { default as MultiStepForm } from "./pages/MultiStepForm/MultiStepForm";
+export { default as Chat } from "./pages/Chat/Chat";

@@ -36,11 +36,11 @@ const { Header, Footer, Sider, Content } = Layout;
 const { Title, Text } = Typography;
 
 const items1 = [
-  { key: "messages", icon: <MailOutlined /> },
-  { key: "chat", icon: <CommentOutlined /> },
-  { key: "archives", icon: <CloudUploadOutlined /> },
-  { key: "notifications", icon: <BellOutlined /> },
-  { key: "recents", icon: <DashboardOutlined /> },
+  // { label:"Messages", key: "messages", icon: <MailOutlined /> },
+  { label:"Chats", key: "chat", icon: <CommentOutlined /> },
+  { label:"Archives", key: "archives", icon: <CloudUploadOutlined /> },
+  { label:"Notifications", key: "notifications", icon: <BellOutlined /> },
+  { label:"Recents", key: "recents", icon: <DashboardOutlined /> },
 ];
 
 function getItem(label, key, icon, children) {
@@ -102,8 +102,11 @@ const PageLayout = (props) => {
         minHeight: "100vh",
       }}
     >
-      <Header style={{ background: "#fff" }} className="header">
-        <div className="logo" />
+      <Header style={{ background: "#fff", padding:"10px", alignItems:"center" }} className="header">
+      <Avatar style={{float:'left'}} size="large" icon={<UserOutlined />} />
+      <Title level={3} style={{ float:'left', padding:"3px", color: "#494949" }}>
+                CUEA SACCO
+              </Title>
         <Menu
           style={{ justifyContent: "flex-end" }}
           mode="horizontal"

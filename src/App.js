@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import {
   AccountProfile,
   ApplyLoan,
+  Chat,
   DashboardPage,
   DividendEarnings,
   DocumentReports,
@@ -55,6 +56,7 @@ function App() {
           <Route path="loan-calculator" element={<LoanCalculator />} />
           <Route path="apply-loan" element={<ApplyLoan />} />
           <Route path="multistep-form" element={<MultiStepForm />} />
+          <Route path="chat" element={<Chat />} />
           <Route path="*" element={<PageNotFound/>}/>
         </Route>
         <Route path="*" element={<PageNotFound/>}/>
