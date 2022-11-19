@@ -104,7 +104,7 @@ const PageLayout = (props) => {
     >
       <Header style={{ background: "#fff", padding:"10px", alignItems:"center" }} className="header">
       <Avatar style={{float:'left'}} size="large" icon={<UserOutlined />} />
-      <Title level={3} style={{ float:'left', padding:"3px", color: "#494949" }}>
+      <Title level={3} style={{ float:'left', padding:"3px", color: "#957D7D" }}>
                 CUEA SACCO
               </Title>
         <Menu
